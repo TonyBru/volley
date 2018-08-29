@@ -30,3 +30,8 @@ $(document).ready(function() {
   }
 
 });
+function keyPressed() {
+  if (keyCode == 39){
+    slide();
+  }
+}
