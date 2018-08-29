@@ -9,7 +9,7 @@ $(document).ready(function() {
   console.log(sliderCount);
   window.setInterval(slide, slideTime);
   window.setInterval(playVid, slideTime);
-  $('body').on('keypress,function(){
+  $('body').on('keypress',function(){
       slide();         
   });
 
