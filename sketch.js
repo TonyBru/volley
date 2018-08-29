@@ -9,7 +9,9 @@ $(document).ready(function() {
   console.log(sliderCount);
   window.setInterval(slide, slideTime);
   window.setInterval(playVid, slideTime);
-
+  $('body').on('keypress,function(){
+      slide();         
+  });
 
 
   var videos = document.getElementsByTagName('video');
@@ -25,11 +27,6 @@ $(document).ready(function() {
   }
 
 });
-function keyPressed() {
-  if (keyCode == 39){
-    slide();
-  }
-}
 
 function slide() {
   slideNumber++;
