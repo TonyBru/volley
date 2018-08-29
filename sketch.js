@@ -11,11 +11,6 @@ $(document).ready(function() {
   window.setInterval(playVid, slideTime);
 
 
-  function slide() {
-    slideNumber++;
-    let left = -(slideNumber % sliderCount)*100;
-    $("#container").css('left', left + 'vw');
-  }
 
   var videos = document.getElementsByTagName('video');
   function playVid() {
@@ -34,4 +29,10 @@ function keyPressed() {
   if (keyCode == 39){
     slide();
   }
+}
+
+function slide() {
+  slideNumber++;
+  let left = -(slideNumber % sliderCount)*100;
+  $("#container").css('left', left + 'vw');
 }
