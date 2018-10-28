@@ -1,7 +1,7 @@
 let slideNumber = 0;
 let sliderCount = 1;
 let slides;
-let slideTime = 12000;
+let slideTime = 15000;
 
 $(document).ready(function() {
   sliderCount = document.getElementsByClassName('slide').length;
