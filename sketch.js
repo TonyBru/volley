@@ -8,10 +8,10 @@ $(document).ready(function() {
   slides = document.getElementsByClassName('slide');
   console.log(sliderCount);
   window.setInterval(slide, slideTime);
-  window.setInterval(playVid, slideTime);
+  //window.setInterval(playVid, slideTime);
   setTimeout(inject, 100);
   $('body').on('keypress',function(){
-      slide();         
+      slide();
   });
 
 
@@ -36,7 +36,5 @@ function slide() {
 }
 
 function inject() {
-  var $head = $("iframe").contents().find("head");                
-  $head.append($("<link/>", 
-    { rel: "stylesheet", href: "kovvTables.css", type: "text/css" }));
+  $("iframe").contents().find("head").append('<script src="kovvTables.js"></script>');
 }
