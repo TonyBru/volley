@@ -38,5 +38,5 @@ function slide() {
 function inject() {
   var $head = $("iframe").contents().find("head");                
   $head.append($("<link/>", 
-    { rel: "stylesheet", href: "file://path/to/style.css", type: "text/css" }));
+    { rel: "stylesheet", href: "kovvTables.css", type: "text/css" }));
 }
