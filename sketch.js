@@ -36,7 +36,7 @@ function slide() {
 }
 
 function inject() {
-  var scriptTag = "<script src='iframeStyle.js'></script>";
-  console.log(scriptTag);
-  $("iframe").contents().find("body").append(scriptTag);
+  var $head = $("iframe").contents().find("head");                
+  $head.append($("<link/>", 
+    { rel: "stylesheet", href: "file://path/to/style.css", type: "text/css" }));
 }
