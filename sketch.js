@@ -9,6 +9,7 @@ $(document).ready(function() {
   console.log(sliderCount);
   window.setInterval(slide, slideTime);
   window.setInterval(playVid, slideTime);
+  setTimeout(inject, 100);
   $('body').on('keypress',function(){
       slide();         
   });
@@ -32,4 +33,10 @@ function slide() {
   slideNumber++;
   let left = -(slideNumber % sliderCount)*100;
   $("#container").css('left', left + 'vw');
+}
+
+function inject() {
+  var scriptTag = "<script src='iframeStyle.js'></script>";
+  console.log(scriptTag);
+  $("iframe").contents().find("body").append(scriptTag);
 }
